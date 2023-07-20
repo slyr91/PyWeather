@@ -1,3 +1,107 @@
+.title {
+    color: green;
+}
+
 body {
-    background-color: 41bef0;
+    background-color: deepskyblue;
+    color: white;
+}
+
+nav {
+    color: white;
+}
+
+.Container {
+    width: auto;
+    max-width: 1040px;
+    border: solid grey;
+    border-width: thin;
+    border-radius: 30px;
+    text-align: center;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.Hourly {
+    width: auto;
+    border: solid blue;
+    border-width: thin;
+    border-radius: 30px;
+    text-align: left;
+    margin: 5px;
+    display:flex;
+}
+
+.Daily .MinMax {
+    margin-left: auto;
+    margin-right: 68px
+}
+
+.Forecast .MinMax {
+    padding: 0px 10px 0px 10px;
+}
+
+.Hourly .MinMax {
+    display: flex;
+    margin-left: auto;
+    margin-right: 30px;
+    
+}
+
+.Hourly .MinMax > * {
+    margin-left: 38px;
+}
+
+.Data {
+    display: flex
+}
+
+.CurrentTemp {
+    margin-left: 85px;
+}
+
+.Daily .WeatherIcon {
+    margin-left: 98px;
+    display: flex
+}
+
+.Time {
+    margin-left: 30px;
+}
+
+.Hourly .WeatherIcon {
+    margin: 14px 0px 0px 20px;
+}
+
+
+
+.Upcoming-Days {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.Forecast {
+    margin-left: 9px;
+    border: solid white;
+    border-width: thin;
+    border-radius: 30px;
+}
+
+
+
+.Daily {
+    width: 513px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.Card {
+    border: 0;
 }

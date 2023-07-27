@@ -3,22 +3,20 @@
 {% block content %}
     <!-- Main, current day weather -->
         <div class="Container Card">
-            <div class="Daily">
+            <div class="Daily" style="background-image: url({{ today['background_image'] }});">
                 <div class="locaton">
-                    <h2>{{ daily['location'] }}</h2>
+                    <h2>{{ today['location'] }}</h2>
                 </div>
-                <div class="WeatherIcon">
-                    <img src="{{ daily['icon_url'] }}"/>
-                </div>
+                <img class="WeatherIcon" src="{{ today['icon_url'] }}"/>
                 <div class="Data">
                     <div class="CurrentTemp">
-                        <p>{{ daily['classification'] }}</p>
-                        <p>{{ daily['current_temp'] }}</p>
-                        <p>Feels like {{ daily['apparent_temp'] }}</p>
+                        <p>{{ today['classification'] }}</p>
+                        <p>{{ today['current_temp'] }}</p>
+                        <p>Feels like {{ today['apparent_temp'] }}</p>
                     </div>
                     <div class="MinMax">
-                        <p>{{ daily['max_temp'] }}/{{ daily['min_temp'] }}</p>
-                        <p>Precipitation: {{ daily['precipitation'] }}%</p>
+                        <p>{{ today['max_temp'] }}/{{ today['min_temp'] }}</p>
+                        <p>Precipitation: {{ today['precipitation'] }}%</p>
                     </div>
                 </div>
             </div>
@@ -30,9 +28,7 @@
                 <div class="Time">
                     <p>{{ hour['time'] }}</p>
                 </div>
-                <div class="WeatherIcon">
-                    <img src="{{ hour['icon_url'] }}"/>
-                </div>
+                <img class="WeatherIcon" src="{{ hour['icon_url'] }}"/>
                 <div class="MinMax">
                     <p>{{ hour['temp'] }}</p>
                     <p>Precipitation: {{ hour['precipitation'] }}%</p>
@@ -40,7 +36,7 @@
             </div>
         </div>
 {% endfor %}
-{% for day in forecast %}
+{% for day in daily %}
         <!-- Daily Forecast -->
         <div class="Container Upcoming-Days">
             <div class="Forecast">
@@ -48,10 +44,8 @@
                     <p>{{ day['day'] }}</p>
                     <p>{{ day['date'] }}</p>
                 </div>
-                <div class="WeatherIcon">
-                    <img src="{{ day['icon_url'] }}"/>
-                    <p>{{ day['classification'] }}</p>
-                </div>
+                <img class="WeatherIcon" src="{{ day['icon_url'] }}"/>
+                <p>{{ day['classification'] }}</p>
                 <div class="MinMax">
                     <p>{{ day['max_temp'] }}/{{ day['min_temp'] }}</p>
                     <p>Precipitation: {{ day['precipitation'] }}%</p>

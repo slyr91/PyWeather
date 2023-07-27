@@ -13,8 +13,7 @@ nav {
 
 .Container {
     width: auto;
-    max-width: 1040px;
-    border: solid grey;
+    max-width: 1040px;s
     border-width: thin;
     border-radius: 30px;
     text-align: center;
@@ -48,7 +47,7 @@ nav {
     display: flex;
     margin-left: auto;
     margin-right: 30px;
-    
+
 }
 
 .Hourly .MinMax > * {
@@ -98,10 +97,20 @@ nav {
     width: 513px;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 30px;
 }
 
 
 
 .Card {
     border: 0;
+}
+
+
+
+
+
+.WeatherIcon {
+    width: 30px;
+    height: 30px;
 }

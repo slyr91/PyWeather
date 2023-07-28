@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT main:__init__
+web: waitress-serve --port=$PORT --call 'pyweatherapp:create_app'

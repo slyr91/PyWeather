@@ -1,1 +1,1 @@
-web: gunicorn --bing :$PORT main:create_app
+web: waitress-serve --port=$PORT --call 'main:create_app'

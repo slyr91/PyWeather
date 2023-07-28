@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT --call "PyWeather:main"
+web: waitress-serve --port=$PORT --call "main"

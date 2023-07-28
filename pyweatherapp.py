@@ -1,6 +1,5 @@
 from flask import Flask
-
-from .. import index
+import index
 
 def create_app():
     app = Flask(__name__)

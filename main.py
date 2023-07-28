@@ -5,10 +5,10 @@ import index
 
 
 def create_app():
-    app = Flask(__name__)
-    app.register_blueprint(index.bp)
+    appf = Flask(__name__)
+    appf.register_blueprint(index.bp)
 
-    return app
+    return appf
 
 
 if __name__ == '__main__':

@@ -1,19 +1,7 @@
-from flask import Flask, render_template
+from flask import Flask
 from os import environ
 
 import index
-from api import location_api
-
-app = Flask(__name__)
-
-app.register_blueprint(index.bp)
-
-
-# @app.route("/")
-def page():
-    location = location_api.get_ip_info("23.43.12.1")
-    print(location['lat'])
-    return render_template('app/index.html')
 
 
 def create_app():
@@ -21,6 +9,7 @@ def create_app():
     app.register_blueprint(index.bp)
 
     return app
+
 
 if __name__ == '__main__':
     app = create_app()

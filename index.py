@@ -13,7 +13,12 @@ bp = Blueprint('index', __name__)
 
 @bp.route('/', methods=['GET'])
 def index():
-    client_ip = request.remote_addr
+    forwarded_header = request.headers.get("X-Forwarded-For")
+    if forwarded_header:
+        client_ip = request.headers.getlist("X-Forwarded-For")[0]
+    else:
+        client_ip = request.remote_addr
+
     print(client_ip)
     ip_info = location_api.get_ip_info(client_ip)
     print(ip_info)

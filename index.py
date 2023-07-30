@@ -19,9 +19,7 @@ def index():
     else:
         client_ip = request.remote_addr
 
-    print(client_ip)
     ip_info = location_api.get_ip_info(client_ip)
-    print(ip_info)
     weather_info = weather_api.get_weather_info(ip_info['lat'], ip_info['lon'])
     package = packaged_weather_info(weather_info, ip_info)
 
